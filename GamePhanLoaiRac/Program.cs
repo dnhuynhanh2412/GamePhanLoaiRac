@@ -353,7 +353,7 @@ class ChuongTrinhGame
 
                     }
                 }
-                else //if (chon5050 == "Y")
+                else
                 {
                     Console.WriteLine("Bạn đã sử dụng chức năng 50/50 cho vòng này rồi!");
                 }
