@@ -304,8 +304,6 @@ class ChuongTrinhGame
 
             int diem = 0; // Điểm của người chơi trong vòng hiện tại
             int diemTungVong = 0; // Điểm số tích lũy của từng vòng.
-            int soThuTu = 1;  //Biến để đánh số thứ tự câu hỏi
-            int socaudaduoctraloi = 0; //Biến để đếm số câu hỏi đã được trả lời
 
             //Trộn danh sách chỉ số câu hỏi
             List<int> indexList = Enumerable.Range(0, soCauHoi).OrderBy(x => rand.Next()).ToList();
