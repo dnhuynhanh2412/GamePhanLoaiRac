@@ -24,7 +24,6 @@ class ChuongTrinhGame
                  Console.BufferHeight / 2 + 7,
               message,
                   ConsoleColor.DarkRed);
-        string nguoichoi = "";
         Console.ReadKey(true);
         // Vòng lặp vô hạn, xóa màn hình và hiển thị menu mỗi lần lặp.
         while (true)
@@ -303,7 +302,6 @@ class ChuongTrinhGame
             Console.WriteLine($"\n--- Vòng {vong} ---");
 
             int diem = 0; // Điểm của người chơi trong vòng hiện tại
-            int diemTungVong = 0; // Điểm số tích lũy của từng vòng.
 
             //Trộn danh sách chỉ số câu hỏi
             List<int> indexList = Enumerable.Range(0, soCauHoi).OrderBy(x => rand.Next()).ToList();
@@ -421,7 +419,6 @@ class ChuongTrinhGame
             }
 
             stopWatch.Stop(); //Kết thúc đồng hồ vòng chơi
-            diemTungVong += diem; //Cộng điểm của hiện tại vào điểm từng vòng
             Console.WriteLine("\nBạn đã hoàn thành vòng {0} với số điểm: {1}/{2}", vong, diem, soCauHoiMoiVong);
             tongDiem += diem; //Cộng điểm của vòng hiện tại vào tổng điểm
 
@@ -459,7 +456,6 @@ class ChuongTrinhGame
     }
 
     //Gán điểm và điểm cao nhất ban đầu bằng 0
-    static int diem = 0;
     static int diemCaoNhat = 0;
     static void KetThucGame(int tongDiem)
     {
