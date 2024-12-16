@@ -425,7 +425,6 @@ class ChuongTrinhGame
             // Hàm trợ giúp để hiển thị các lựa chọn
             static void DisplayOptions(List<string> options)
             {
-                char optionLetter = 'A'; //Khởi tạo biến optionLetter với ký tự A
                 foreach (var option in options) //Vòng lặp duyệt qua từng phần tử trong danh sách options
                                                 //var option: biến option sẽ nhận từng giá trị trong danh sách options
                                                 //Mỗi phần tử (tức là một lựa chọn trả lời) sẽ được gán vào biến option  trong mỗi vòng lặp.
@@ -434,7 +433,6 @@ class ChuongTrinhGame
                     {
 
                         Console.WriteLine($" {option}");
-                        optionLetter++; // để tăng từ ‘A’ lên ‘B’ đến ‘C’, ‘D’.
                     }
                 }
             }
@@ -447,7 +445,6 @@ class ChuongTrinhGame
                 foreach (var wrongAnswer in wrongAnswers) //duyệt qua các đáp án sai trong danh sách wrongAnswers
                 {
                     options.Remove(wrongAnswer); //tìm và xóa phần tử đầu tiên có giá trị bằng wrongAnswer trong danh sách options.
-
                 }
             }
         }
